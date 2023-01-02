@@ -22,8 +22,6 @@ screen.onkey(snake.right, "Right")
 
 game_on = True
 
-score = 0
-
 score.increase_score()
 
 while game_on:
@@ -35,6 +33,7 @@ while game_on:
     # detect collision
     if snake.head.distance(food) < 15:
         print("food eaten")
+        print(score.score + 1)
         food.relocate()
         snake.extend()
         score.increase_score()
@@ -50,7 +49,5 @@ while game_on:
 
 
 score.game_over()
-
-
 
 screen.exitonclick()

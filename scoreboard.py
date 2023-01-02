@@ -15,15 +15,16 @@ class Scoreboard(Turtle):
         self.update_score()
         self.tb = 70
         self.lr = 24
-        self.goto(0, 270)
+        self.goto(0, 260)
 
 
     def update_score(self):
-        self.goto(0, 270)
+        self.goto(0, 260)
         self.color("white")
         self.write(f"Score: {self.score} ", True, align=ALIGNMENT, font=FONT)
         self.hideturtle()
         self.penup()
+        
 
     def game_over(self):
         self.goto(0, 0)
